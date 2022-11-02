@@ -6,6 +6,6 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-product = Product.new(name: "Apple", price: 1.40, image_url: "https://usapple.org/wp-content/uploads/2019/10/apple-pink-lady.png", description: "An edible fruit from an apple tree that is red and crunchy")
-product = Product.new(name: "Corn", price: 0.50, image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhNehPr_vsIRfEOjhzw-fM2TBHL3HMILoKiw&usqp=CAU", description: "It's corn!")
-product = Product.new(name: "Pomegranate", price: 2.48, image_url: "https://www.news-medical.net/image.axd?picture=2020%2F12%2Fshutterstock_1291478515.jpg", description: "A plant to which one can be slightly allergic")
+product = Product.create(name: "Apple", price: 1.40, image_url: "https://usapple.org/wp-content/uploads/2019/10/apple-pink-lady.png", description: "An edible fruit from an apple tree that is red and crunchy")
+product = Product.create(name: "Corn", price: 0.50, image_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhNehPr_vsIRfEOjhzw-fM2TBHL3HMILoKiw&usqp=CAU", description: "It's corn!")
+product = Product.create(name: "Pomegranate", price: 2.48, image_url: "https://www.news-medical.net/image.axd?picture=2020%2F12%2Fshutterstock_1291478515.jpg", description: "A plant to which one can be slightly allergic")
