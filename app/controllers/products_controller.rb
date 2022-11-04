@@ -26,4 +26,10 @@ class ProductsController < ApplicationController
     products.save
     render json: products.as_json
   end
+
+  def destroy
+    products = Product.find_by(id: params["id"])
+    products.destroy
+    render json: { message: "This item doesn't exist any more :(. Better luck next time!" }
+  end
 end
