@@ -11,9 +11,9 @@ class ProductsController < ApplicationController
 
   def create
     products = Product.new(name: params["name"], price: params["price"], image_url: params["image_url"], description: params["description"])
-    if products.save #my happy path :)
+    if products.save #my happy path
       render json: products.as_json
-    else #my sad path :(
+    else #my sad path
       render json: { error: products.errors.full_messages }, status: 422
     end
   end
@@ -26,8 +26,11 @@ class ProductsController < ApplicationController
     @products.image_url = params["image_url"] || @products.image_url
     @products.description = params["description"] || @products.description
 
-    @products.save
-    render :show
+    if @products.save #my happy path
+      render :show
+    else #my sad path
+      render json: { error: @products.errors.full_messages }, status: 422
+    end
   end
 
   def destroy
