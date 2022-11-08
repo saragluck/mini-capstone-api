@@ -11,8 +11,11 @@ class ProductsController < ApplicationController
 
   def create
     products = Product.new(name: params["name"], price: params["price"], image_url: params["image_url"], description: params["description"])
-    products.save
-    render json: products.as_json
+    if products.save #my happy path :)
+      render json: products.as_json
+    else #my sad path :(
+      render json: { error: products.errors.full_messages }, status: 422
+    end
   end
 
   def update
