@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
   end
 
   def create
-    products = Product.new(name: params["name"], price: params["price"], image_url: params["image_url"], description: params["description"])
+    products = Product.new(name: params["name"], price: params["price"], description: params["description"], supplier_id: params[:supplier_id])
     if products.save #my happy path
       render json: products.as_json
     else #my sad path
@@ -23,7 +23,6 @@ class ProductsController < ApplicationController
 
     @products.name = params["name"] || @products.name
     @products.price = params["price"] || @products.price
-    @products.image_url = params["image_url"] || @products.image_url
     @products.description = params["description"] || @products.description
 
     if @products.save #my happy path
