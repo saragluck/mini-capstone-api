@@ -5,5 +5,6 @@
   image_url: @products.image_url,
   description: @products.description,
   is_discounted?: @products.is_discounted?,
-  friendly_created_at: @products.friendly_created_at 
+  friendly_created_at: @products.friendly_created_at,
+  supplier: product.supplier
 }
