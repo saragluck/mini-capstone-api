@@ -1,12 +1,12 @@
-@products.map do |products|
+@products.map do |product|
   {
-    id: @products.id,
-    name: @products.name, 
-    price: @products.price,
-    image_url: @products.image_url,
-    description: @products.description,
-    is_discounted?: @products.is_discounted?,
-    friendly_created_at: @products.friendly_created_at,
-    supplier: @products.supplier
+    id: product.id,
+    name: product.name, 
+    price: product.price,
+    image_url: product.image_url,
+    description: product.description,
+    is_discounted?: product.is_discounted?,
+    friendly_created_at: product.friendly_created_at,
+    supplier: product.supplier,
   }
 end

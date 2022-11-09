@@ -1,5 +1,5 @@
 class Supplier < ApplicationRecord
-  def products
+  def product
     Product.where(supplier_id: id) #adds association
   end
 end

@@ -6,5 +6,5 @@
   description: @products.description,
   is_discounted?: @products.is_discounted?,
   friendly_created_at: @products.friendly_created_at,
-  supplier: @products.supplier
+  supplier: @products.supplier,
 }
