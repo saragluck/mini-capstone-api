@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   def index
     @products = Product.all
-    render templace: "products/index"
+    render template: "products/index"
   end
 
   def show
