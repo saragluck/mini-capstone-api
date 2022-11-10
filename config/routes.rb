@@ -13,4 +13,8 @@ Rails.application.routes.draw do
   # All these are actions that happen to the users
 
   post "/users" => "users#create"
+
+  # These are session actions
+
+  post "/sessions" => "sessions#create"  #Logs in
 end
