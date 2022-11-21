@@ -17,4 +17,18 @@ Rails.application.routes.draw do
   # These are session actions
 
   post "/sessions" => "sessions#create"  #Logs in
+
+  # Order actions
+
+  post "/orders" => "orders#create"
+
+  get "/orders/:id" => "orders#show"
+
+  get "/orders" => "orders#index"
+
+  # Cart actions
+
+  post "/cart" => "carted_products#create"
+
+  get "/cart" => "carted_products#index"
 end
